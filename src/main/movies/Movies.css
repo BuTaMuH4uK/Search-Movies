@@ -1,8 +1,15 @@
 .movies {
-  flex-basis: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.items {
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: space-around;
   padding: 20px 0;
   margin: 0;
 }
@@ -11,4 +18,10 @@
   display: flex;
   justify-content: space-between;
   padding: 40px 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .movies {
+    width: 100%;
+  }
 }

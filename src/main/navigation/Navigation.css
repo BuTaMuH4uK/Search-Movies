@@ -1,5 +1,29 @@
-.navigation {
-    flex-basis: 20%;
-    min-width: 300px;
-    padding: 20px;
+.wrapper {
+  min-width: 300px;
+  padding: 20px;
+}
+
+#navigation {
+  min-width: 300px;
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    min-width: calc(100% - 40px);
+  }
+  #navigation {
+    min-width: calc(100% - 40px);
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0px;
 }

@@ -4,8 +4,8 @@ import "./Movies.css";
 import Button from "../navigation/Button";
 
 const Movies = ({ movies, page, onPageIncrease, onPageDecrease }) => (
-  <section>
-    <ul className="movies">
+  <section className="movies">
+    <ul className="items">
       {movies.map(movie => <MovieListItem key={movie.id} movie={movie} />)}
     </ul>
     <div className="pagination">

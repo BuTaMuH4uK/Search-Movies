@@ -9,7 +9,7 @@ const MovieListItem = ({ movie }) => {
 
   return (
     <li className="movie-item">
-      <Link to={`/movie/${id}`} className="thumbnail">
+      <Link to={process.env.PUBLIC_URL + `/movie/${id}`} className="thumbnail">
         <img src={imgUrl} alt={title} />
         <div className="movie-description">
           <h2>{title}</h2>
