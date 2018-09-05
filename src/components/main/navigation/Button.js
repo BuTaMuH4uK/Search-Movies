@@ -1,9 +1,9 @@
 import React from "react";
 import "./Button.css";
 
-const Button = ({ onClick, children }) => (
+const Button = ({ children }) => (
   <div className="search-button">
-    <button onClick={onClick}>{children}</button>
+    <button>{children}</button>
   </div>
 );
 

@@ -1,0 +1,35 @@
+const initialState = {
+  genre: 'Action',
+  genres: [],
+  year: {
+    label: "year",
+    min: 1990,
+    max: 2018,
+    step: 1,
+    value: { min: 2000, max: 2018 }
+  },
+  rating: {
+    label: "rating",
+    min: 0,
+    max: 10,
+    step: 1,
+    value: { min: 7, max: 10 }
+  },
+  runtime: {
+    label: "runtime",
+    min: 0,
+    max: 300,
+    step: 15,
+    value: { min: 0, max: 300 }
+  }
+}
+
+export const navigationReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'SET_GENRES':
+      return { ...state, genres: action.payload };
+
+    default:
+      return state;
+  }
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Header from "./header/Header";
-import Main from "./main/Main";
-import Movie from "./movie/Movie";
+import Header from "./components/header/Header";
+import Main from "./containers/Main";
+import Movie from "./components/movie/Movie";
 import NotFound from "./NotFound";
 
 const App = () => {
