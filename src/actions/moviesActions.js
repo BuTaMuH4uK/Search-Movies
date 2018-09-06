@@ -1,4 +1,13 @@
-export const storeMovies = movies => ({
+/* export const storeMovies = movies => ({
   type: 'STORE_MOVIES',
-  payload: movies
+  payload: movies,
 });
+
+export const onPageIncrease = () => ({
+  type: 'PAGE_INCREASE',
+});
+
+export const onPageDecrease = () => ({
+  type: 'PAGE_DECREASE',
+});
+ */

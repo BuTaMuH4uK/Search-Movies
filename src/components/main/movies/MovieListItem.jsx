@@ -1,11 +1,11 @@
-import React from "react";
-import "./MovieListItem.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './MovieListItem.css';
+import { Link } from 'react-router-dom';
 
 const MovieListItem = ({ movie }) => {
-  const { id, title, poster_path, release_date, vote_average } = movie;
-  const imgUrl = `https://image.tmdb.org/t/p/w342/${poster_path}`;
-  const year = release_date.substring(0, 4);
+  const { id, title, posterPath, releaseDate, voteAverage } = movie;
+  const imgUrl = `https://image.tmdb.org/t/p/w342/${posterPath}`;
+  const year = releaseDate.substring(0, 4);
 
   return (
     <li className="movie-item">
@@ -20,7 +20,7 @@ const MovieListItem = ({ movie }) => {
             </div>
             <div className="movie-rating">
               <span className="title">Rating</span>
-              <span>{vote_average}</span>
+              <span>{voteAverage}</span>
             </div>
           </section>
         </div>

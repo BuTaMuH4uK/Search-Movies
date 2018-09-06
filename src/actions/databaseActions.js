@@ -1,4 +1,10 @@
-export const setGenres = genres => ({
+/* export const setGenres = genres => ({
   type: 'SET_GENRES',
-  payload: genres
+  payload: genres,
 });
+
+export const ChangeUrl = url => ({
+  type: 'CHANGE_URL',
+  payload: url,
+});
+ */

@@ -1,0 +1,8 @@
+export const RECEIVE_GENRES = 'RECEIVE_GENRES';
+export const CHANGE_URL = 'CHANGE_URL';
+export const STORE_MOVIES = 'STORE_MOVIES';
+export const PAGE_INCREASE = 'PAGE_INCREASE';
+export const PAGE_DECREASE = 'PAGE_DECREASE';
+export const ON_GENRE_CHANGE = 'ON_GENRE_CHANGE';
+export const ON_CHANGE_SLIDER = 'ON_CHANGE_SLIDER';
+export const SET_PAGE_ONE = 'SET_PAGE_ONE';
