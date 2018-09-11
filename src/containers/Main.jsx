@@ -19,8 +19,6 @@ class Main extends Component {
   }
 
   render() {
-    console.log('render main');
-
     return (
       <section className="main" >
         <Navigation />

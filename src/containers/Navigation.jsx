@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createUrl, onChangeSlider, setPageOne } from '../actions';
-import Selection from './Selection';
-import Slider from '../components/main/navigation/Slider';
+import { createUrl, setPageOne } from '../actions';
+import SelectionWrapper from './SelectionWrapper';
+import SliderWrapper from './SliderWrapper';
 import Button from '../components/main/navigation/Button';
+import navigationSelector from '../selectors/navigationSelector';
 import './Navigation.css';
 
 class Navigation extends Component {
-  componentDidUpdate() {
-    console.log('render navigation');
-  }
-
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
   }
@@ -35,17 +32,20 @@ class Navigation extends Component {
 
   render() {
     const {
+      genre,
+      genres,
       year,
       rating,
       runtime,
     } = this.props.navigation;
+    
     return (
       <div className="wrapper">
         <section id="navigation">
-          <Selection />
-          <Slider data={year} onChangeSlider={this.props.onChangeSlider} />
-          <Slider data={rating} onChangeSlider={this.props.onChangeSlider} />
-          <Slider data={runtime} onChangeSlider={this.props.onChangeSlider} />
+          <SelectionWrapper genre={genre} genres={genres} />
+          <SliderWrapper data={year} />
+          <SliderWrapper data={rating} />
+          <SliderWrapper data={runtime} />
           <Button onClick={this.props.onSearchButtonClick}>Search</Button>
         </section>
       </div>
@@ -54,11 +54,10 @@ class Navigation extends Component {
 }
 
 const mapStateToProps = state => ({
-  navigation: state.navigation,
+  navigation: navigationSelector(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  onChangeSlider: data => dispatch(onChangeSlider(data)),
   onSearchButtonClick: () => {
     dispatch(setPageOne());
     dispatch(createUrl());

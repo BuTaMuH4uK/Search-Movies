@@ -1,32 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import './Slider.css';
 
-class Slider extends Component {
-  onChange = range => {
-    this.props.onChangeSlider({
-      type: this.props.data.label,
+const Slider = ({ data, onChangeSlider }) => {
+  const { min, max, step, value, label } = data;
+
+  const onChange = range => {
+    onChangeSlider({
+      type: label,
       value: range
     });
-  }
+  };
 
-  render() {
-    console.log('render slider');
-    const { min, max, step, value, label } = this.props.data;
-    return (
-      <div className="slider">
-        <label>{label}</label>
-        <InputRange
-          minValue={min}
-          maxValue={max}
-          step={step}
-          onChange={this.onChange}
-          value={value}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="slider">
+      <label>{label}</label>
+      <InputRange
+        minValue={min}
+        maxValue={max}
+        step={step}
+        onChange={onChange}
+        value={value}
+      />
+    </div>
+  );
+};
 
 export default Slider;

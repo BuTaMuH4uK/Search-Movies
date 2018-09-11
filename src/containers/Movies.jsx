@@ -14,9 +14,8 @@ class Movies extends Component {
   }
 
   render() {
-    console.log('render movies')
     const { movies } = this.props;
-
+    
     return (
       <section className="movies">
         <ul className="items">

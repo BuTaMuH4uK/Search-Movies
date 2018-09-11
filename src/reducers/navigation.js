@@ -1,5 +1,7 @@
 import {
-  ON_CHANGE_SLIDER,
+  SET_GENRES,
+  ON_GENRE_CHANGE,
+  ON_CHANGE_SLIDER
 } from '../constants/actionTypes';
 
 const initialState = {
@@ -30,6 +32,14 @@ const initialState = {
 
 const navigationReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SET_GENRES: {
+      const { genres } = action.payload;
+      return { ...state, genres };
+    }
+
+    case ON_GENRE_CHANGE:
+      return { ...state, genre: action.payload.target.value };
+
     case ON_CHANGE_SLIDER:
       return {
         ...state,

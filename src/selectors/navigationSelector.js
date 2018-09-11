@@ -1,14 +1,10 @@
 import { createSelector } from 'reselect';
 
-const databaseSelector = state => state.database;
-const navigationSelector = state => state.navigation;
-const moviesSelector = state => state.movies;
+const navigation = state => state.navigation;
 
-const navigationSelectors = createSelector(
-  databaseSelector,
-  navigationSelector,
-  moviesSelector,
-  () => ({})
-)
+const navigationSelector = createSelector(
+  navigation,
+  navigation => navigation
+);
 
-export default navigationSelectors;
+export default navigationSelector;

@@ -19,7 +19,7 @@ const updateUrl = url => ({
 
 export const createUrl = () => (dispatch, getState) => {
   const { year, rating, runtime } = getState().navigation;
-  const selectedGenre = getState().listGenres.genres.find(genre => genre.name === getState().listGenres.localGenre);
+  const selectedGenre = getState().navigation.genres.find(genre => genre.name === getState().navigation.genre);
   const genreId = selectedGenre.id;
 
   const moviesUrl =
