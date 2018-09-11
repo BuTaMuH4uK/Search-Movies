@@ -21,7 +21,8 @@ module.exports = {
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "rules": {
         "linebreak-style": 0,
-        'no-console': 'off',
+        "no-console": "off",
+        "react/prop-types": 0
     },
     "settings": {
         "react": {

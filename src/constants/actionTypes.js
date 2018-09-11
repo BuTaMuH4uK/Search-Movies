@@ -1,4 +1,4 @@
-export const RECEIVE_GENRES = 'RECEIVE_GENRES';
+export const SET_GENRES = 'RECEIVE_GENRES';
 export const CHANGE_URL = 'CHANGE_URL';
 export const STORE_MOVIES = 'STORE_MOVIES';
 export const PAGE_INCREASE = 'PAGE_INCREASE';

@@ -12,6 +12,7 @@ class Slider extends Component {
   }
 
   render() {
+    console.log('render slider');
     const { min, max, step, value, label } = this.props.data;
     return (
       <div className="slider">

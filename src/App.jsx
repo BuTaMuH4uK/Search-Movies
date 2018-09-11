@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/header/Header';
-import Main from './components/Main';
+import Main from './containers/Main';
 import Movie from './components/main/movies/movie/Movie';
 import NotFound from './NotFound';
 

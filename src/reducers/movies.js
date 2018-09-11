@@ -48,8 +48,9 @@ const moviesReducer = (state = initialState, action) => {
       const nextPage = state.page - 1;
       if (nextPage > 0) {
         return { ...state, page: nextPage };
+      } else {
+        return state;
       }
-      break;
     }
 
     default:

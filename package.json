@@ -6,6 +6,7 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^13.1.0",
     "gh-pages": "^1.2.0",
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -14,7 +15,9 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
-    "redux-devtools": "^3.4.1"
+    "redux-devtools": "^3.4.1",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^3.0.1"
   },
   "scripts": {
     "clean": "rm -rf node_modules/gh-pages/.cache",
